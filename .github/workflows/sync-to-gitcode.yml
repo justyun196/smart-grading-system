@@ -1,0 +1,31 @@
+name: 同步到 GitCode
+
+on:
+  push:
+    branches: [ main ]  # 监听 main 分支推送
+    tags: [ 'v*' ]      # 监听版本标签推送
+  release:
+    types: [ published ]  # 监听 Release 发布
+
+jobs:
+  sync-to-gitcode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 拉取完整历史，包含所有标签
+
+      - name: 推送到 GitCode
+        env:
+          GITCODE_TOKEN: ${{ secrets.GITCODE_TOKEN }}
+        run: |
+          # 设置 Git 用户信息
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 添加 GitCode 远程仓库（使用 Token 认证）
+          git remote add gitcode https://oauth2:${GITCODE_TOKEN}@gitcode.com/justyun196/smart-grading-system.git
+          
+          # 推送所有分支和标签到 GitCode
+          git push --mirror gitcode
