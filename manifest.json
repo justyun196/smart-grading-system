@@ -1,9 +1,9 @@
 {
     "latest": {
-        "version": "1.5.5",
-        "tag": "v1.5.5",
-        "release_date": "2026-11-23",
-        "changelog": "• 改卷监视小框（HUD）全量检测：改卷网页右下角小框实时显示网页当前学生 / 题号 / 改卷模式 / 当前分数，与软件期望逐项比对（绿✓ / 红✗ + 应为什么）；学生与题号对不上时自动反查名单与题目列表，直接给出「网页上是谁的哪道题、每空应得多少分」；全部读值只走已验证录制规则，未录依据对应行灰显并降级提示。\n• 监测接入自动批改控制：批改前预检任务注册；批改以网页实际显示为准（学生不一致自动替换、题号不一致拒绝执行防错题）；首份批改弹窗确认 + 防重复提交；网页学生不在名单自动停止；改卷模式不符自动真实点击切换到预设模式（仅已验证依据生效）。\n• 当前分数检测：输入完成提交前读网页实时分数与软件期望总分比对，一致绿✓、不一致红✗ + 差额提示 + WARNING 日志。\n• 选区标点重构（两阶段确认 + 题号跟网页走）：①置顶修复——精确匹配「改卷系统_」窗口、按记录恢复系统最大化；②初始/换题间隙横排显示「▶ 开始检测」「✋ 手动框选」（页面自由操作），点「开始检测」才弹出识别窗检测网页信息；③「使用识别」按图片元素定位答题区域免拖框，识别+图片就绪后直接点图上标记空；④题号跟网页走——网页题号不在队列时当前题的题名直接更新（如「第13题」），自动批改题号比对自动对齐；⑤「手动框选」原拖框流程全程可用。\n• 悬浮球批量修复：右键「关闭改卷网页」改二次点击确认（防批改中误关）；不占任务栏 / dock 栏（.NET ShowInTaskbar 层设置 + UI 线程 Invoke 编组）；打开/关闭/球关闭/幂等四条路径的连接状态对称同步（预设置卡显示不再骗人）；拉前台不再取消最大化；最小化移屏外前按最大化尺寸调整窗口（屏外批改布局与最大化一致）。"
+        "version": "1.5.8",
+        "tag": "v1.5.8",
+        "release_date": "2026-11-24",
+        "changelog": "• 向导项目操作条（新）：向导顶部新增蓝色渐变项目条，三个按钮：\n• ▶ 继续上次（蓝）：不动任何数据，按当前进度跳到第一个未完成步骤\n• 🔁 复用题目（橙·警示）：保留试卷题目定义（题干 / 答案 / 采分点 / 标点 rect / marksRel / 图片绑定），清空班级名单 / 截图 / 批改进度，用于同一套试卷改另一班；应用后自动跳到「打开改卷网站」步骤\n• 🗑 新建改卷（红·警示）：彻底清空所有数据，从零开始\n• 三个按钮均有二次确认，复用会特别说明保留项\n• 向导全屏自适应（改进）：卡片 `max-width` 限制移除，改为 `min-height:calc(100vh - 24px)` 直接铺满窗口，仅留上下 12px 边距，适配各种屏幕尺寸。\n• 向导题目增删（增强）：支持三层增删——整题 / 填空题的空 / 主观题的小设问，每层都有 🗑 删除按钮和「＋ 加空 / ＋ 加一小问」入口；类型下拉限宽 120px。\n• 向导字段标签：题干 / 答案 / 采分点 / 设问输入框前新增灰色小粗体标签（11.5px `#64748b`），不再靠 placeholder 猜哪个框是什么。"
     },
     "history": {
         "v1.0.3": {
@@ -499,6 +499,50 @@
                     "tag": "v1.5.5",
                     "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.5/config-1.5.5.zip",
                     "size": 1133
+                }
+            }
+        },
+        "v1.5.6": {
+            "files": {
+                "app": {
+                    "filename": "app-core-1.5.6.zip",
+                    "tag": "v1.5.6",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.6/app-core-1.5.6.zip",
+                    "size": 15056840
+                },
+                "runtime": {
+                    "filename": "runtime-static-1.4.2.zip",
+                    "tag": "v1.4.2",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.4.2/runtime-static-1.4.2.zip",
+                    "size": 337048969
+                },
+                "config": {
+                    "filename": "config-1.5.6.zip",
+                    "tag": "v1.5.6",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.6/config-1.5.6.zip",
+                    "size": 1133
+                }
+            }
+        },
+        "v1.5.8": {
+            "files": {
+                "app": {
+                    "filename": "app-core-1.5.8.zip",
+                    "tag": "v1.5.8",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/app-core-1.5.8.zip",
+                    "size": 15124621
+                },
+                "runtime": {
+                    "filename": "runtime-static-1.5.8.zip",
+                    "tag": "v1.5.8",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/runtime-static-1.5.8.zip",
+                    "size": 337059123
+                },
+                "config": {
+                    "filename": "config-1.5.8.zip",
+                    "tag": "v1.5.8",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/config-1.5.8.zip",
+                    "size": 3351
                 }
             }
         }
