@@ -1,9 +1,9 @@
 {
     "latest": {
-        "version": "1.5.8",
-        "tag": "v1.5.8",
-        "release_date": "2026-11-24",
-        "changelog": "• 向导项目操作条（新）：向导顶部新增蓝色渐变项目条，三个按钮：\n• ▶ 继续上次（蓝）：不动任何数据，按当前进度跳到第一个未完成步骤\n• 🔁 复用题目（橙·警示）：保留试卷题目定义（题干 / 答案 / 采分点 / 标点 rect / marksRel / 图片绑定），清空班级名单 / 截图 / 批改进度，用于同一套试卷改另一班；应用后自动跳到「打开改卷网站」步骤\n• 🗑 新建改卷（红·警示）：彻底清空所有数据，从零开始\n• 三个按钮均有二次确认，复用会特别说明保留项\n• 向导全屏自适应（改进）：卡片 `max-width` 限制移除，改为 `min-height:calc(100vh - 24px)` 直接铺满窗口，仅留上下 12px 边距，适配各种屏幕尺寸。\n• 向导题目增删（增强）：支持三层增删——整题 / 填空题的空 / 主观题的小设问，每层都有 🗑 删除按钮和「＋ 加空 / ＋ 加一小问」入口；类型下拉限宽 120px。\n• 向导字段标签：题干 / 答案 / 采分点 / 设问输入框前新增灰色小粗体标签（11.5px `#64748b`），不再靠 placeholder 猜哪个框是什么。"
+        "version": "1.5.8.2",
+        "tag": "v1.5.8.2",
+        "release_date": "2026-11-25",
+        "changelog": "• 学习中心课堂（测试·新）：批后分析「⋯ 更多」新增「🎓 学习中心课堂」工具页，用于课堂讲评分工与落地：\n• 派题工作台：每题给「老师讲 / 学生讲 / 不讲」建议，学生讲自动推荐人选与讲法；规则为每题最多 1 人、每人限 1~2 题、敏感题不派、优先错得典型或有巧解的学生，AI 判定的敏感题默认老师讲、可手动解除\n• 学生事实卡片：只呈现事实（本次答题情况、反复错点标「已错 N 次」、空白多/漏题多/某类题总错等行为信号），不替老师下结论，老师可补一句备注\n• 小纸条 A4 裁切：讲题条（正面任务提示、背面答案与 3~5 句口语化讲解）、讨论条、订正条，每页 4 条带裁切线，双面打印对齐\n• AI 一次合批完成敏感判断与讲稿生成，同素材走指纹缓存不重复调用；AI 不可用时自动降级为零 AI 模式，功能仍可用\n• 向导页学生名单改为全自动获取：向导不再要求手动输入人数和名单，统一走自动获取学生名单方案，人数自动统计。\n• 悬浮窗样式调整：优化悬浮窗外观与显示效果。"
     },
     "history": {
         "v1.0.3": {
@@ -542,6 +542,28 @@
                     "filename": "config-1.5.8.zip",
                     "tag": "v1.5.8",
                     "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/config-1.5.8.zip",
+                    "size": 3351
+                }
+            }
+        },
+        "v1.5.8.2": {
+            "files": {
+                "app": {
+                    "filename": "app-core-1.5.8.2.zip",
+                    "tag": "v1.5.8.2",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.2/app-core-1.5.8.2.zip",
+                    "size": 15145138
+                },
+                "runtime": {
+                    "filename": "runtime-static-1.5.8.zip",
+                    "tag": "v1.5.8",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/runtime-static-1.5.8.zip",
+                    "size": 337059123
+                },
+                "config": {
+                    "filename": "config-1.5.8.2.zip",
+                    "tag": "v1.5.8.2",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.2/config-1.5.8.2.zip",
                     "size": 3351
                 }
             }
