@@ -1,9 +1,9 @@
 {
     "latest": {
-        "version": "1.5.8.2",
-        "tag": "v1.5.8.2",
-        "release_date": "2026-11-25",
-        "changelog": "• 学习中心课堂（测试·新）：批后分析「⋯ 更多」新增「🎓 学习中心课堂」工具页，用于课堂讲评分工与落地：\n• 派题工作台：每题给「老师讲 / 学生讲 / 不讲」建议，学生讲自动推荐人选与讲法；规则为每题最多 1 人、每人限 1~2 题、敏感题不派、优先错得典型或有巧解的学生，AI 判定的敏感题默认老师讲、可手动解除\n• 学生事实卡片：只呈现事实（本次答题情况、反复错点标「已错 N 次」、空白多/漏题多/某类题总错等行为信号），不替老师下结论，老师可补一句备注\n• 小纸条 A4 裁切：讲题条（正面任务提示、背面答案与 3~5 句口语化讲解）、讨论条、订正条，每页 4 条带裁切线，双面打印对齐\n• AI 一次合批完成敏感判断与讲稿生成，同素材走指纹缓存不重复调用；AI 不可用时自动降级为零 AI 模式，功能仍可用\n• 向导页学生名单改为全自动获取：向导不再要求手动输入人数和名单，统一走自动获取学生名单方案，人数自动统计。\n• 悬浮窗样式调整：优化悬浮窗外观与显示效果。"
+        "version": "1.5.8.4",
+        "tag": "v1.5.8.4",
+        "release_date": "2026-11-26",
+        "changelog": "• 向导第 4 步新增「🎯 点击检测」：读取当前站点判断依据里已验证的「图片是否加载」元素，在改卷网页上确认作答图片元素存在且可见后，一次性为本卷所有题目写入元素定位（imageBinding）。之后截图按元素精确截取整张作答图，不再退化成整页截图、也不会把周围内容截进来。\n• 检测不通过会直接提示原因（站点未打开 / 没有已验证元素 / 元素不存在 / 元素不可见），不影响原有截图流程\n• 同一站点页面结构一致，整卷一次检测即可覆盖所有题目\n• 依赖判断依据中已录制并验证的 `image_loaded` 规则；未录制时请先在判断依据里补充"
     },
     "history": {
         "v1.0.3": {
@@ -564,6 +564,50 @@
                     "filename": "config-1.5.8.2.zip",
                     "tag": "v1.5.8.2",
                     "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.2/config-1.5.8.2.zip",
+                    "size": 3351
+                }
+            }
+        },
+        "v1.5.8.3": {
+            "files": {
+                "app": {
+                    "filename": "app-core-1.5.8.3.zip",
+                    "tag": "v1.5.8.3",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.3/app-core-1.5.8.3.zip",
+                    "size": 15145076
+                },
+                "runtime": {
+                    "filename": "runtime-static-1.5.8.zip",
+                    "tag": "v1.5.8",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/runtime-static-1.5.8.zip",
+                    "size": 337059123
+                },
+                "config": {
+                    "filename": "config-1.5.8.3.zip",
+                    "tag": "v1.5.8.3",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.3/config-1.5.8.3.zip",
+                    "size": 3351
+                }
+            }
+        },
+        "v1.5.8.4": {
+            "files": {
+                "app": {
+                    "filename": "app-core-1.5.8.4.zip",
+                    "tag": "v1.5.8.4",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.4/app-core-1.5.8.4.zip",
+                    "size": 15146174
+                },
+                "runtime": {
+                    "filename": "runtime-static-1.5.8.zip",
+                    "tag": "v1.5.8",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8/runtime-static-1.5.8.zip",
+                    "size": 337059123
+                },
+                "config": {
+                    "filename": "config-1.5.8.4.zip",
+                    "tag": "v1.5.8.4",
+                    "url": "https://gitcode.com/justyun196/smart-grading-system/releases/download/v1.5.8.4/config-1.5.8.4.zip",
                     "size": 3351
                 }
             }
